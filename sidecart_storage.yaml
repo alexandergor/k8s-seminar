@@ -20,4 +20,6 @@ spec:
       mountPath: /storage
  volumes:
  - name: app-storage
-   HostPath : /storage
+   hostPath:
+      # directory location on host
+      path: /data
