@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/auth-secret: basic-auth
     # message to display with an appropriate context why the authentication is required
     nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required - basic'
-
+    nginx.ingress.kubernetes.io/default-backend: spring-music2
 
 spec:
   ingressClassName: nginx
