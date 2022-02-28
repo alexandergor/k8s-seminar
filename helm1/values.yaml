@@ -1,8 +1,10 @@
 deployment:
   name: my-music
   replicas: 2
+  ingress: false
 pods:
-  image: yanivomc/spring-music
+  repo: yanivomc
+  image: spring-music
   tag: latest
 service:
   type: LoadBalancer
