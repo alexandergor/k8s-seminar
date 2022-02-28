@@ -5,7 +5,11 @@ metadata:
 spec:
   selector:
     app: music
-  type: {{ .Values.service.type }}
+  {{ if eq .Values.deployment.ingress false }}
+  type: ClusterIP
+  {{ else }}
+  type: LoadBalancer
+  {{ end }}
   ports:
   - name: {{ .Values.service.name }}
     protocol: TCP
