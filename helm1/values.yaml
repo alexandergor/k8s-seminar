@@ -1,0 +1,9 @@
+deployment:
+  name: my-music
+  replicas: 2
+pods:
+  image: yanivomc/spring-music
+  tag: latest
+service:
+  type: LoadBalancer
+  name: my-service
